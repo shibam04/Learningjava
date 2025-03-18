@@ -18,7 +18,7 @@ public class Task6
         {
             System.out.println("The triangle is equilateral");
         }
-        else if(n1 == n2 || n1 == n3)
+        else if(n1 == n2 || n1 == n3 || n2==n3)
         {
             System.out.println("The triangle is isosceles");
         }
