@@ -1,4 +1,4 @@
-package ex14_string;
+package ex15_string;
 
 public class Prog4_funccharat
 {
