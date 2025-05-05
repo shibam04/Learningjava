@@ -7,16 +7,14 @@ public class Person
     public static void main(String[] args)
     {
         Behaviour b=new Behaviour();
-        String Firstname=b.FirstName();
-        System.out.println("First Name:"+Firstname);
+        System.out.println("First Name:"+b.First_Name);
         String Lastname=b.LastName();
         System.out.println("Last Name:"+Lastname);
-        int age=b.Age();
-        System.out.println("Age"+age);
+        b.Age(29);
         System.out.println("Gender:"+b.gender);
         System.out.println("Home Address:"+b.Address);
         System.out.println("Office Address:"+b.Office_Address);
-        float Salary=b.Salary();
+        double Salary=b.Salary(50000.00);
         System.out.println("Salary:"+Salary);
         System.out.println("Qualifications:"+b.Qualification);
         System.out.println("Designation:"+b.Designation);
@@ -27,7 +25,7 @@ public class Person
 }
 class Behaviour
 {
-    String First_Name;
+    String First_Name="Shibam";
     String Last_Name;
     int age;
     char gender='M';
@@ -39,14 +37,13 @@ class Behaviour
     double experience=4.0;
     Scanner sc=new Scanner(System.in);
 
-    String FirstName()
+    //Without Parameters and Without Return Type
+    void FirstName()
     {
-        System.out.print("Enter First Name:");
-        String First_Name = sc.next();
-        return First_Name;
-
+        System.out.println("First Name:"+First_Name);
     }
 
+    //Without Parameters but Return Type
     String LastName()
     {
         System.out.print("Enter Last Name:");
@@ -55,18 +52,17 @@ class Behaviour
 
     }
 
-    int Age()
+    //With Parameters and Without Return Type
+    void Age(int age)
     {
-        System.out.print("Enter Age:");
-        int age=sc.nextInt();
-        return age;
+        System.out.println("Age is:"+age);
     }
 
-    float Salary()
+    //With Parameters and With Return Type
+    double Salary(double salary)
     {
-        System.out.print("Enter Salary:");
-        float salary=sc.nextFloat();
-        return salary;
+        double salary1=salary*2;
+        return salary1;
     }
 
 
